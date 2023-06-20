@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"/>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Inconsolata:700">
+        <link rel="stylesheet" type="text/css" href="signup.css">
+        <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Transactions</title>
+    </head>
+    <body>
+        <div id="content" class="container">
+            <br>
+            <div class="container1" id="container1">
+                <div class="form-container sign-up-container">
+                    <form id="form_1"  onsubmit="signupForm(event)">
+                        <h1>Create Account</h1>
+                        <input type="text" placeholder="Username" id="signup_username" class="validate" name="uname" required="required">
+                        <input type="password" name="pwd" placeholder="Password" id="signup_password" required="required" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters">
+                        <input type="password" name="rpwd" placeholder="Re-enter Password" id="re_signup_password" required="required" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters">
+                        <br>
+                        <div>
+                            <input id="su" type="submit" value="Sign Up">
+                        </div>
+                    </form>
+                </div>
+
+                <div class="form-container sign-in-container">
+                    <form id="form_3" onsubmit="loginForm(event)">
+                        <h1>Sign in</h1>
+                        <input type="text" placeholder="Username" id="login_username" required="required"/>
+                        <input type="password" placeholder="Password" id="login_password" required="required"/>
+                        <div>
+                            <input id="si" type="submit" value="Sign In">
+                        </div>
+                    </form>
+                </div>
+                <div class="overlay-container">
+                    <div class="overlay">
+                        <div class="overlay-panel overlay-left">
+                            <h1>Welcome Back!</h1>
+                            <p>To keep connected with us please login with your personal info</p>
+                            <button class="ghost" id="signIn">Sign In</button>
+                        </div>
+                        <div class="overlay-panel overlay-right">
+                            <h1>Hello, Friend!</h1>
+                            <p>Enter your personal details and start journey with us</p>
+                            <button class="ghost" id="signUp">Sign Up</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="signup.js" type="text/javascript"></script>
+        <script>
+            $(document).ready(function(){
+                M.AutoInit();
+            });
+        </script>
+    </body>
+</html>
